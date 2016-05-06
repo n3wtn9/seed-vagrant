@@ -15,6 +15,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "./opts/install-aptitude-packages.sh"
   config.vm.provision "shell", inline: "cp /vagrant/opts/vagrant-env.sh /etc/profile.d/"
 
+  config.vm.provision "shell",
+    path: "./opts/docker-engine-upgrade.sh"
+
   # Pull docker containers into vm
   # config.vm.provision "docker" do |d|
   #   d.pull_images(
