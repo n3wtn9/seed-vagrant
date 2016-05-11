@@ -76,10 +76,10 @@ Vagrant.configure("2") do |config|
       aws.keypair_name = ENV['KEYPAIR_NAME']
       aws.security_groups = ["default"]
       
-      aws.ami = "ami-68837308"
+      aws.ami = "ami-9abea4fb"
       aws.region = "us-west-2"
-      aws.instance_type = "m4.2xlarge"
-      aws.tenancy = "dedicated"
+      aws.instance_type = "t2.micro"
+      aws.tenancy = "default"
   
       override.ssh.username = "ubuntu"
       override.ssh.private_key_path = ENV['AWS_SSH_PRIVATE_KEY_PATH']
