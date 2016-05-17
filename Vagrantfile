@@ -75,10 +75,11 @@ Vagrant.configure("2") do |config|
       aws.secret_access_key = ENV['SECRET_ACCESS_KEY']
       aws.keypair_name = ENV['KEYPAIR_NAME']
       aws.security_groups = ["default"]
-      
+     
+      # ubuntu Trusty 14.04 LTS
       aws.ami = "ami-9abea4fb"
       aws.region = "us-west-2"
-      aws.instance_type = "t2.micro"
+      aws.instance_type = "m2.large"
       aws.tenancy = "default"
   
       override.ssh.username = "ubuntu"
