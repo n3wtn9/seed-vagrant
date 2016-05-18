@@ -10,6 +10,12 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sour
 
 apt-get update
 
+sudo apt-get install -y linux-image-extra-$(uname -r)
+
 apt-get purge -y lxc-docker*
 
 apt-get install -y docker-engine
+
+curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+
+chmod +x /usr/local/bin/docker-compose
