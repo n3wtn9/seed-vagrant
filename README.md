@@ -3,6 +3,10 @@
 starting point for vagrant projects.
 
 # starting
-run `make`
+run 
+```
+$> make
+$> source source.sh
+```
 
 [ref](https://github.com/mitchellh/vagrant-aws)
